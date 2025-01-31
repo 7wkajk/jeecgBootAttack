@@ -1,0 +1,166 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "17.0.11" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"title": "JeecgBoot漏洞利用工具v1.0"
+			"background": new com.jformdesigner.model.SwingColor( "Button.selectedForeground" )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane1"
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "tabbedPane1StateChanged", true ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "panel1"
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "mem1"
+						"text": "注入内存马"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 35
+						"width": 100
+						"height": 30
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "code1"
+						"text": "代码执行"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 75
+						"height": 30
+						"x": 10
+						"y": 5
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "请输入命令："
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 105
+						"y": 10
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "cmd"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 185
+						"y": 10
+						"width": 440
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "queryFieldBySql Freemarker模板注入"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "panel2"
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "h2"
+						"text": "h2"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jdbcDriverStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 75
+						"height": 30
+						"x": 270
+						"y": 0
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "mysql"
+						"text": "mysql"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jdbcDriverStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 75
+						"height": 30
+						"x": 120
+						"y": 0
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "pgsql"
+						"text": "pgsql"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jdbcDriverStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 75
+						"height": 30
+						"x": 195
+						"y": 0
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "选择数据库驱动："
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 5
+						"width": 100
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "请输入jdbc uri："
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 35
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "jdbcuri"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 120
+						"y": 30
+						"width": 505
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "testConnection JDBC"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 0
+				"y": 60
+				"width": 745
+				"height": 95
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "result"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 0
+				"y": 160
+				"width": 743
+				"height": 440
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "请输入URL："
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 15
+					"width": 80
+					"height": 30
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "url"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 85
+					"y": 15
+					"width": 540
+					"height": 30
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "attackButton"
+					"text": "attack"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button3", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 630
+					"y": 15
+					"height": 30
+					"width": 110
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 0
+				"y": 0
+				"width": 745
+				"height": 60
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 85, 30 )
+			"size": new java.awt.Dimension( 745, 605 )
+		} )
+	}
+}
