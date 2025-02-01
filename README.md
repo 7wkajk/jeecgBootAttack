@@ -44,3 +44,7 @@ swing练手项目，目前支持queryFieldBySql Freemarker模板注入、testCon
 该工具只授权于企业内部进行问题排查，请勿用于非法用途，请遵守网络安全法，否则后果作者概不负责
 
 如有涉及公司与个人敏感信息，侵权烦请告知，我们会立即删除并致歉。谢谢！所有工具安全性自测！！！
+
+## 参考
+
+https://github.com/4ra1n/java-swing-gui-stater
